@@ -1,6 +1,7 @@
 # QR-Code Generator
 
 Eine einfache Desktop-Anwendung zum Generieren von anpassbaren QR-Codes.
+
 ## Überblick
 
 Dieser QR-Code Generator ermöglicht das einfache Erstellen von QR-Codes mit vollständiger Anpassungsfähigkeit - von Inhalt bis Farbe.
@@ -13,18 +14,11 @@ Dieser QR-Code Generator ermöglicht das einfache Erstellen von QR-Codes mit vol
 - Vorschau nach Erstellung des QR-Codes
 - Plattformübergreifend (Windows, Linux)
 
-### Bedienungsanleitung
-
-1. Text/URL eingeben
-2. Farben optional anpassen
-3. Speicherort wählen
-4. Dateityp wählen
-5. "QR-Code Generieren" klicken
-
 ## Voraussetzungen
 
 - Python 3.12+
 - pip
+- tkinter (Teil der Python-Standardbibliothek)
 - virtualenv (empfohlen)
 
 ## Verzeichnisstruktur
@@ -33,13 +27,14 @@ Dieser QR-Code Generator ermöglicht das einfache Erstellen von QR-Codes mit vol
 .
 ├── img/
 │   ├── qr-code-outline.ico
-|   ├── qr-code-outline.svg
+│   ├── qr-code-outline.svg
 │   └── qrcode_gui.png
 ├── gui_mockup.dio
 ├── LICENSE
 ├── main.py
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── starter.sh
 ```
 
 ## Installation
@@ -50,7 +45,7 @@ Dieser QR-Code Generator ermöglicht das einfache Erstellen von QR-Codes mit vol
    ```
 
 2. Navigiere in das Verzeichnis:
-   ``` shell
+   ```shell
    cd QR-CodeGen
    ```
 
@@ -70,9 +65,33 @@ Dieser QR-Code Generator ermöglicht das einfache Erstellen von QR-Codes mit vol
    pip install -r requirements.txt
    ```
 
-## Bekannte Probleme
+## Ausführung
 
-- Keine bekannten Probleme
+Die Anwendung kann auf folgende Wege gestartet werden:
+
+### Methode 1: Direkt mit Python
+```bash
+python main.py
+```
+
+### Methode 2: Mit dem Start-Skript (Linux/macOS)
+```bash
+chmod +x starter.sh
+./starter.sh
+```
+
+### Methode 3: Mit dem Start-Skript (Windows)
+```bash
+starter.sh
+```
+
+## Verwendung
+
+1. **Text/URL eingeben** – Geben Sie den Inhalt des QR-Codes ein
+2. **Farben anpassen** (optional) – Klicken Sie auf die Farbwähler-Buttons
+3. **Speicherort wählen** – Klicken Sie "Durchsuchen" um den Speicherort zu bestimmen
+4. **Dateityp wählen** – Wählen Sie zwischen PNG, JPG oder SVG
+5. **Generieren** – Klicken Sie "QR-Code Generieren" zum Erstellen
 
 ## Abhängigkeiten
 
